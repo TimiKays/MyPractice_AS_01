@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tangqi.weixin.weixin">
+
+    <ListView
+        android:id="@+id/dialogs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorLightGrey">
+
+    </ListView>
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- android:background="@drawable/bk_footer" -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/talk"
+                style="@style/main_tab_bottom"
+                android:layout_height="40dp"
+                android:drawableTop="@drawable/talk" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/contactor"
+                style="@style/main_tab_bottom"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/contactor" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系人"
+                android:layout_below="@id/contactor"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/favorite"
+                style="@style/main_tab_bottom"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/favorite" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/favorite"
+                android:text="收藏夹"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/me"
+                style="@style/main_tab_bottom"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/me" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我"
+                android:layout_below="@id/me"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </RadioGroup>
+
+</android.support.constraint.ConstraintLayout>
