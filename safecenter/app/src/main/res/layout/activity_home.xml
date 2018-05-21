@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/text_title"
+        android:text="安全中心" />
+
+    <TextView
+        android:marqueeRepeatLimit="marquee_forever"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:text="堪萨斯的农民威廉（克林特·伊斯特伍德 Clint Eastwood ）年轻时曾是出名的杀手和劫匪，然而当遇上了克劳迪亚后，他的生活开始彻底改变。" />
+
+    <GridView
+        android:id="@+id/gv_function_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:gravity="center"
+        android:verticalSpacing="20dp"
+android:layout_margin="15dp"
+        >
+
+    </GridView>
+</LinearLayout>
