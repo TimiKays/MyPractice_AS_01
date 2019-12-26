@@ -16,7 +16,9 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.tangqi.safecenter.R;
+import com.tangqi.safecenter.utils.ConstantValues;
 import com.tangqi.safecenter.utils.PermissionUtils;
+import com.tangqi.safecenter.utils.SpUtils;
 import com.tangqi.safecenter.utils.StreamUtil;
 
 import org.json.JSONException;
@@ -35,7 +37,7 @@ import java.net.URL;
 public class SplashActivity extends AppCompatActivity {
 
     private static final String TAG = "Mylog";
-    private static final String[] PERMISSIONS = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+
     private TextView mTv_version_name;
     private int mLocalVersionCode;
     private int mServerVisionCode;
@@ -48,26 +50,12 @@ public class SplashActivity extends AppCompatActivity {
 
 
         initUI();
-        requestMyPermission();
+
         initData();
 
     }
 
-    /**
-     * 通过工具类请求权限。
-     */
-    private void requestMyPermission() {
-        PermissionUtils.checkAndRequestMorePermissions(this, PERMISSIONS, 2, new PermissionUtils
-                .PermissionRequestSuccessCallBack() {
-            @Override
-            public void onHasPermission() {
-//                Toast.makeText(mc,"权限申请成功",Toast.LENGTH_SHORT).show();
-                Log.i(TAG, "onHasPermission: 请求权限成功");
-            }
-        });
 
-
-    }
 
     /**
      * 初始化数据
@@ -79,7 +67,25 @@ public class SplashActivity extends AppCompatActivity {
 
         //[2]检测更新版本
         mLocalVersionCode = getVersionCode();//本地版本号
-        checkVisionCode();
+
+        //判断设置中是否设置了自动更新。
+        if(SpUtils.getState(this, ConstantValues.AUTO_UPDATE,false)){
+            checkVisionCode();
+        }else{
+            new Thread(){
+                @Override
+                public void run() {
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    enterHome();
+                }
+            }.start();
+
+        }
+
 
     }
 
@@ -186,6 +192,7 @@ public class SplashActivity extends AppCompatActivity {
                                 }
                             });
                         } else {
+
                             //版本号相同，等够3秒，直接进入主界面。
                             long endTime = System.currentTimeMillis();
                             if ((endTime - startTime) < 3000) {
@@ -201,12 +208,15 @@ public class SplashActivity extends AppCompatActivity {
                     }
 
                 } catch (MalformedURLException e) {
+                    Log.i(TAG, "MalformedURLException:"+e);
                     e.printStackTrace();
                     enterHome();
                 } catch (IOException e) {
+                    Log.i(TAG, "IOException:"+e);
                     e.printStackTrace();
                     enterHome();
                 } catch (JSONException e) {
+                    Log.i(TAG, "JSONException:"+e);
                     e.printStackTrace();
                     enterHome();
                 }

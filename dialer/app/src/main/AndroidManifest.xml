@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tangqi">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Relative_Activity">
+            <intent-filter>
+                <action android:name="relative" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".service.Table" />
+        <activity
+            android:name=".Calculator"
+            android:label="计算器"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".ListView1Activity"
+            android:label="纯文本列表" />
+        <activity
+            android:name=".ListView2Activity"
+            android:label="带图片的列表" />
+        <activity android:name=".DatePickerActivity" />
+        <activity
+            android:name=".GridViewTest"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity android:name=".SpinnerTest" />
+        <activity
+            android:name=".SpinnerWithImg"
+            android:label="选择图片" />
+        <activity
+            android:name=".ProgressBarTest"
+            android:theme="@android:style/Theme.Holo.Light" />
+        <activity android:name=".WebViewTest" />
+        <activity android:name=".FragmentDemo" />
+        <activity android:name=".Fragment_silent" />
+        <activity
+            android:name=".ViewPagerTest"
+            android:label="ViewPager" />
+        <activity
+            android:name=".ViewFlipperTest"
+            android:label="轮播图" />
+        <activity
+            android:name=".GalleryTest"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity android:name=".SeekBarTest" />
+        <activity android:name=".Log_in" />
+        <activity android:name=".Toast_test" />
+        <activity android:name=".DialogTest" />
+        <activity android:name=".XmlStorage" />
+        <activity android:name=".MySqliteDemo" />
+        <activity android:name=".WebCodeView" />
+        <activity android:name=".WebImageView" />
+        <activity android:name=".NewsClient" />
+        <activity android:name=".SubmitToServer" />
+        <activity android:name=".MultiThreadDownload" />
+        <activity android:name=".service.RpTestActivity" />
+        <activity android:name=".service.RpResultActivity" />
+        <activity android:name=".WishActivity" />
+        <activity android:name=".WishNumberActivity" />
+        <activity android:name=".WishContentActivity" />
+        <activity android:name=".ContentProviderActivity" />
+
+        <service
+            android:name=".service.PhoneService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".AnimationActivity"></activity>
+    </application>
+
+</manifest>

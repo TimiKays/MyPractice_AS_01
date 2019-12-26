@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="log_in">Log In</string>
+    <string name="hint_username">please input your username</string>
+    <string name="hint_password">please input your password</string>
+    <string name="rememberCode">Remember password</string>
+</resources>

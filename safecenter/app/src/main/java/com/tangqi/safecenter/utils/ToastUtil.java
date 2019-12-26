@@ -13,12 +13,14 @@ import android.widget.Toast;
 public class ToastUtil {
 
 
+
     /**
      * 显示吐司的方法
+     *
      * @param context
      * @param text
      */
-    public static void show(Context context,String text){
+    public static void show(Context context, String text) {
         Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
 
     }

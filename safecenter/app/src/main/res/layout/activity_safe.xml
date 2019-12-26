@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tangqi.safecenter.activity.SafeActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:text="手机防盗"
+        style="@style/text_title"
+        />
+
+    <com.tangqi.safecenter.view.SettingItemCb
+        android:id="@+id/safe_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.tangqi.safecenter.view.SettingItemCb>
+
+    <TextView
+        style="@style/text_main.middle"
+        android:text="设置"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll_safe_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <com.tangqi.safecenter.view.SettingItemArrow
+            android:id="@+id/change_safe_tel"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </com.tangqi.safecenter.view.SettingItemArrow>
+
+
+        <TextView
+            style="@style/text_main"
+            android:text="GPS追踪：#*location*#"
+            android:drawableLeft="@android:drawable/star_big_on"
+            android:gravity="center"
+            android:padding="10dp"
+            />
+        <TextView
+            style="@style/text_main"
+            android:text="播放报警音乐：#*alarm*#"
+            android:drawableLeft="@android:drawable/star_big_on"
+            android:gravity="center"
+            android:padding="10dp"
+            />
+        <TextView
+            style="@style/text_main"
+            android:text="数据销毁：#*wipedata*#"
+            android:drawableLeft="@android:drawable/star_big_on"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            />
+        <TextView
+            style="@style/text_main"
+            android:text="远程锁屏：#*lockscreen*#"
+            android:drawableLeft="@android:drawable/star_big_on"
+            android:gravity="center"
+            android:padding="10dp"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

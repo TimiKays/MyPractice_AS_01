@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/text_title"
+        android:text="打开防盗保护" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:text="功能描述：重启手机时如发现绑定的sim卡变化，则发送报警短信给指定的安全号码。"
+        android:textColor="@color/grey" />
+
+    <com.tangqi.safecenter.view.SettingItemArrow
+        xmlns:safecenter="http://schemas.android.com/apk/res/com.tangqi.safecenter"
+        android:id="@+id/start_device_manager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="start_device_manager"
+        safecenter:def_describe="激活后才可使用数据销毁和远程锁屏功能哦"
+        safecenter:title="激活设备管理器" />
+
+    <com.tangqi.safecenter.view.SettingItemCb
+        android:id="@+id/si_bindSIM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+    </com.tangqi.safecenter.view.SettingItemCb>
+
+    <TextView
+        style="@style/text_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:text="设置接收短信的手机号" />
+
+
+    />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/safe_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+
+        <ImageView
+            android:id="@+id/img_select_tel"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignEnd="@+id/safe_tel"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@android:drawable/ic_menu_search" />
+
+        <Button
+            android:id="@+id/start_safe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="16dp"
+            android:background="@drawable/selector_big_button"
+            android:text="开启防盗保护"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_imgsite"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="https://www.baidu.com/img/bd_logo1.png?where=super"
+
+        />
+
+    <Button
+        android:id="@+id/bt_look_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="查看图片"
+        />
+
+
+    <ImageView
+        android:id="@+id/img_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+         />
+
+
+
+</LinearLayout>

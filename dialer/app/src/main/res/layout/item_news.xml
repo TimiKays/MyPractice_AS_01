@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <com.glandroid.smartimagedemo.SmartImageView
+        android:id="@+id/news_img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"
+        android:background="@color/lightbule"
+        android:src="@mipmap/ic_launcher"
+         />
+
+    <TextView
+        android:id="@+id/news_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/news_img"
+        android:layout_toEndOf="@id/news_img"
+        android:text="新闻标题"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        />
+
+    <TextView
+        android:id="@+id/news_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/news_img"
+        android:layout_toEndOf="@+id/news_img"
+        android:maxLines="2"
+        android:text="@string/long_text"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightbule"></LinearLayout>
+
+</RelativeLayout>

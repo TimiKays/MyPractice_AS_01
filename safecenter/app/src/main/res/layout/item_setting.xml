@@ -8,15 +8,15 @@
     android:paddingTop="5dp">
 
     <TextView
-        android:id="@+id/tv_update"
+        android:id="@+id/tv_arrow_title"
         style="@style/text_main"
         android:layout_marginTop="5dp"
-        android:text="自动更新" />
+        android:text="设置项" />
 
     <TextView
-        android:id="@+id/tv_update_state"
+        android:id="@+id/tv_arrow_describe"
         style="@style/text_main.small"
-        android:layout_below="@id/tv_update"
+        android:layout_below="@id/tv_arrow_title"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
         android:text="已关闭" />
@@ -24,7 +24,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_below="@id/tv_update_state"
+        android:layout_below="@id/tv_arrow_describe"
         android:background="@color/grey" />
 
     <CheckBox
@@ -32,6 +32,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true" />
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
 
 </RelativeLayout>

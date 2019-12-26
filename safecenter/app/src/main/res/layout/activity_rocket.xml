@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+  >
+
+    <TextView
+        style="@style/text_title"
+        android:text="加速小火箭" />
+    <Button
+        android:id="@+id/start_rocket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开小火箭"
+        android:onClick="start_rocket"/>
+    <Button
+        android:id="@+id/stop_rocket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关闭小火箭"
+        android:onClick="stop_rocket"/>
+</LinearLayout>

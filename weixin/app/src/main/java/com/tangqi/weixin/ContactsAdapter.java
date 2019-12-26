@@ -54,6 +54,6 @@ public class ContactsAdapter extends ArrayAdapter {
 
     class ViewHolder{
         ImageView image;
-        TextView name;;
+        TextView name;
     }
 }

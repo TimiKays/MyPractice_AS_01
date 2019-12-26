@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+    <TextView
+        style="@style/text_title"
+        android:text="高级工具" />
+
+    <com.tangqi.safecenter.view.SettingItemArrow
+        xmlns:safecenter="http://schemas.android.com/apk/res/com.tangqi.safecenter"
+        android:id="@+id/query_number_belongs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="query_number_belongs"
+        safecenter:def_describe="查询指定手机号码的归属地"
+        safecenter:title="归属地查询"
+        />
+
+    <com.tangqi.safecenter.view.SettingItemArrow
+        xmlns:safecenter="http://schemas.android.com/apk/res/com.tangqi.safecenter"
+        android:id="@+id/rocket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="rocket"
+        safecenter:def_describe="打开或关闭加速小火箭"
+        safecenter:title="加速小火箭"
+        />
+
+</LinearLayout>
