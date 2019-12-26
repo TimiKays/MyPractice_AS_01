@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SafeCenter</string>
+    <string name="sample_device_admin">设备管理器</string>
+    <string name="sample_device_admin_description">一键锁屏、一键清除数据</string>
+</resources>
